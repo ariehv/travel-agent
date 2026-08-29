@@ -1,7 +1,9 @@
 class FlightAgent:
 
     def search(self, origin, destination):
+
         return {
             "origin": origin,
-            "destination": destination
+            "destination": destination,
+            "route": f"{origin} → Madrid → {destination}"
         }
