@@ -1,19 +1,21 @@
+from app.agents.budget_agent import BudgetAgent
 from app.agents.flight_agent import FlightAgent
+from app.agents.hotel_agent import HotelAgent
+from app.agents.itinenary_agent import ItineraryAgent
 
-print("Travel Agent Started")
+flight = FlightAgent()
+hotel = HotelAgent()
+budget = BudgetAgent()
+itinenary = ItineraryAgent()
+
+
+print(flight.search("TLV", "Buenos Aires"))
 print()
 
-agent = FlightAgent()
-
-trip = agent.search(
-    "TLV",
-    "Buenos Aires"
-)
-
-print("Trip Request:")
-print(f"From: {trip['origin']}")
-print(f"To: {trip['destination']}")
+print(hotel.search("Buenos Aires"))
 print()
 
-print("Suggested Route:")
-print(trip["route"])
+print(budget.calculate())
+print()
+
+print(itinenary.build())
