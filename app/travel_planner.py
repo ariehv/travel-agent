@@ -1,4 +1,5 @@
 from app.ai_agent import AIAgent
+from app.storage import save_trip
 from app.user_profile import UserProfile
 
 
@@ -39,5 +40,16 @@ class TravelPlanner:
         - attractions
         - daily itinerary
         """
+        itinerary = self.ai.ask(prompt)
+        
 
-        return self.ai.ask(prompt)
+        trip_id = save_trip(
+            origin,
+            destination,
+            days,
+            itinerary
+        )
+
+        print(f"Trip saved with ID {trip_id}")
+
+        return itinerary
