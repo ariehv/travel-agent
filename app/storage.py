@@ -21,3 +21,15 @@ def save_trip(origin, destination, days, itinerary):
     db.close()
 
     return trip.id
+
+def get_trip(trip_id):
+
+    db = SessionLocal()
+
+    trip = db.query(Trip).filter(
+        Trip.id == trip_id
+    ).first()
+
+    db.close()
+
+    return trip
