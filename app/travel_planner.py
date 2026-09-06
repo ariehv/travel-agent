@@ -10,12 +10,7 @@ class TravelPlanner:
         self.profile = UserProfile()
         self.ai = AIAgent()
 
-    def create_trip(
-        self,
-        origin,
-        destination,
-        days
-    ):
+    def generate_itinerary(self, origin, destination, days):    
 
         prompt = f"""
         Walking level:
@@ -40,7 +35,20 @@ class TravelPlanner:
         - attractions
         - daily itinerary
         """
+        
         itinerary = self.ai.ask(prompt)
+        
+        return itinerary
+    
+    def create_trip(
+        self,
+        origin,
+        destination,
+        days
+    ):
+
+        
+        itinerary = self.generate_itinerary(origin, destination, days)
         
 
         trip_id = save_trip(

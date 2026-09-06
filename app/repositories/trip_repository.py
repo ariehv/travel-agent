@@ -1,7 +1,7 @@
 from app.database import SessionLocal
 from app.models import Trip
 from sqlalchemy import or_
-
+from app.travel_planner import TravelPlanner
 
 def save_trip(
     origin,
@@ -110,8 +110,6 @@ def update_trip(trip_id):
 
     db = SessionLocal()
 
-    'trip_id = int(input("Trip ID: "))'
-
     trip = db.query(Trip).filter(
         Trip.id == trip_id
     ).first()
@@ -124,10 +122,13 @@ def update_trip(trip_id):
 
         exit()
 
-    print()
+    print(f"Current origin: {trip.origin}  ")
     print(f"Current destination: {trip.destination}")
     print(f"Current days: {trip.days}")
     print()
+    new_origin = input(
+        "New origin (Enter to keep current): "
+    ).strip()
 
     new_destination = input(
         "New destination (Enter to keep current): "
@@ -144,9 +145,13 @@ def update_trip(trip_id):
     if new_days:
 
         trip.days = int(new_days)
+    if new_origin:
 
+        trip.origin = new_origin    
+    new_itinerary =TravelPlanner().generate_itinerary(trip.origin, trip.destination, trip.days)
+    trip.itinerary = new_itinerary
     db.commit()
-
+    
     print()
     print("Trip updated successfully")
 
