@@ -18,3 +18,20 @@ class Trip(Base):
     days = Column(Integer)
 
     itinerary = Column(Text)
+
+
+class UserProfile(Base):
+
+    __tablename__ = "user_profiles"
+
+    id = Column(Integer, primary_key=True)
+
+    name = Column(String)
+
+    home_airport = Column(String)
+
+    budget = Column(String)
+
+    walking_level = Column(String)
+
+    hotel_preference = Column(String)

@@ -1,15 +1,43 @@
+from app.database import SessionLocal
+from app.models import UserProfile as DBUserProfile
+
+
 class UserProfile:
 
     def __init__(self):
 
-        self.preferences = {
+        db = SessionLocal()
 
-            "walking_level":
-                "low",
+        profile = db.query(
+            DBUserProfile
+        ).first()
 
-            "hotel_type":
-                "city center",
+        db.close()
 
-            "budget":
-                "moderate"
-        }
+        if profile:
+
+            self.preferences = {
+
+                "walking_level":
+                    profile.walking_level,
+
+                "hotel_type":
+                    profile.hotel_preference,
+
+                "budget":
+                    profile.budget
+            }
+
+        else:
+
+            self.preferences = {
+
+                "walking_level":
+                    "low",
+
+                "hotel_type":
+                    "city center",
+
+                "budget":
+                    "moderate"
+            }
