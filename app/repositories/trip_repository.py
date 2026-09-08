@@ -79,6 +79,7 @@ def search_trips(search_text):
 
             print(
                 f"{trip.id} | "
+                f"{trip.origin} -> "
                 f"{trip.destination} | "
                 f"{trip.days} days"
             )
@@ -148,7 +149,13 @@ def update_trip(trip_id):
     if new_origin:
 
         trip.origin = new_origin    
-    new_itinerary =TravelPlanner().generate_itinerary(trip.origin, trip.destination, trip.days)
+
+    prompt, new_itinerary = TravelPlanner().generate_itinerary(
+    trip.origin,
+    trip.destination,
+    trip.days
+)
+    trip.prompt = prompt
     trip.itinerary = new_itinerary
     db.commit()
     

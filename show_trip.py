@@ -12,7 +12,9 @@ if trip:
     print(f"Destination: {trip.destination}")
     print(f"Days: {trip.days}")
     print("=" * 50)
-
+    print("\nPROMPT")
+    print("-" * 40)
+    print(trip.prompt)
     print("\nItinerary:\n")
     print(trip.itinerary)
 

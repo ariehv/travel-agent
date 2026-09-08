@@ -17,6 +17,10 @@ class UserProfile:
         if profile:
 
             self.preferences = {
+                "name":
+                    profile.name,
+                "home_airport":
+                    profile.home_airport,
 
                 "walking_level":
                     profile.walking_level,
@@ -31,6 +35,11 @@ class UserProfile:
         else:
 
             self.preferences = {
+                "name":
+                    "Lenia",
+
+                "home_airport":
+                    "TLV",
 
                 "walking_level":
                     "low",

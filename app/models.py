@@ -16,6 +16,7 @@ class Trip(Base):
     destination = Column(String)
 
     days = Column(Integer)
+    prompt = Column(Text)
 
     itinerary = Column(Text)
 

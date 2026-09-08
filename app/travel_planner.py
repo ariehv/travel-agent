@@ -10,11 +10,36 @@ class TravelPlanner:
         self.profile = UserProfile()
         self.ai = AIAgent()
 
-    def generate_itinerary(self, origin, destination, days):    
+    def get_trip_history(self):
+    
+        from app.database import SessionLocal
+        from app.models import Trip
+    
+        db = SessionLocal()
+    
+        trips = db.query(Trip).all()
+    
+        db.close()
+    
+        return trips
+    
+
+    def generate_itinerary(self, origin, destination, days): 
+
+        history = self.get_trip_history() 
+        history_text = ""
+
+        for trip in history:
+
+            history_text += (
+            f"- {trip.destination}\n"
+    ) 
         prompt = f"""
         You are an experienced travel planner.
 
         Traveler Profile:
+        Name: {self.profile.preferences['name']}
+        Home Airport: {self.profile.preferences['home_airport']}
 
         Walking level:
         {self.profile.preferences['walking_level']}
@@ -24,9 +49,11 @@ class TravelPlanner:
 
         Budget:
         {self.profile.preferences['budget']}
-
+        Previous trips:
+        {history_text}  
+    
         Trip Information:
-
+        
         Origin:
         {origin}
 
@@ -68,10 +95,14 @@ class TravelPlanner:
 
         Be practical and realistic.
         """
+        print("\nPROMPT SENT TO AI")
+        print("-" * 40)
+        print(prompt)
+        print("-" * 40)
 
         itinerary = self.ai.ask(prompt)
         
-        return itinerary
+        return prompt,itinerary
     
     def create_trip(
         self,
@@ -81,16 +112,19 @@ class TravelPlanner:
     ):
 
         
-        itinerary = self.generate_itinerary(origin, destination, days)
+        prompt, itinerary = self.generate_itinerary(origin, destination, days)
         
 
         trip_id = save_trip(
             origin,
             destination,
             days,
+            prompt,
             itinerary
         )
 
         print(f"Trip saved with ID {trip_id}")
 
         return itinerary
+
+    

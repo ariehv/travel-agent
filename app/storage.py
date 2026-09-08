@@ -2,7 +2,7 @@ from app.database import SessionLocal
 from app.models import Trip
 
 
-def save_trip(origin, destination, days, itinerary):
+def save_trip(origin, destination, days,prompt, itinerary):
 
     db = SessionLocal()
 
@@ -10,6 +10,7 @@ def save_trip(origin, destination, days, itinerary):
         origin=origin,
         destination=destination,
         days=days,
+        prompt=prompt,
         itinerary=itinerary
     )
 
