@@ -1,7 +1,7 @@
 from app.database import SessionLocal
 from app.models import Trip
 from sqlalchemy import or_
-from app.travel_planner import TravelPlanner
+
 
 def save_trip(
     origin,
@@ -108,7 +108,7 @@ def delete_trip(trip_id):
     db.close()
 
 def update_trip(trip_id):
-
+    from app.travel_planner import TravelPlanner
     db = SessionLocal()
 
     trip = db.query(Trip).filter(
@@ -163,3 +163,13 @@ def update_trip(trip_id):
     print("Trip updated successfully")
 
     db.close()
+
+def get_trip_history():
+
+    db = SessionLocal()
+
+    trips = db.query(Trip).all()
+
+    db.close()
+
+    return trips

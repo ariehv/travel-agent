@@ -1,6 +1,9 @@
 from app.ai_agent import AIAgent
 from app.storage import save_trip
 from app.user_profile import UserProfile
+from app.repositories.trip_repository import (
+    get_trip_history
+)
 
 
 class TravelPlanner:
@@ -26,7 +29,7 @@ class TravelPlanner:
 
     def generate_itinerary(self, origin, destination, days): 
 
-        history = self.get_trip_history() 
+        history = get_trip_history() 
         history_text = ""
 
         for trip in history:

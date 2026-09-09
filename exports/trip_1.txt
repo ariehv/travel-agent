@@ -1,0 +1,201 @@
+============================================================
+TRIP INFORMATION
+============================================================
+
+Trip ID: 1
+Origin: Tel Aviv
+Destination: kiev
+Days: 2
+
+============================================================
+PROMPT
+============================================================
+
+
+        You are an experienced travel planner.
+
+        Traveler Profile:
+        Name: Lenia
+        Home Airport: TLV
+
+        Walking level:
+        Low
+
+        Hotel preference:
+        City Center
+
+        Budget:
+        Moderate
+        Previous trips:
+          
+    
+        Trip Information:
+        
+        Origin:
+        Tel Aviv
+
+        Destination:
+        kiev
+
+        Duration:
+        2 days
+
+        Create a detailed day-by-day itinerary.
+
+        For each day include:
+
+        - Morning activities
+        - Afternoon activities
+        - Evening activities
+        - Recommended local food
+        - Transportation tips
+
+        Also include:
+
+        1. Best hotel areas to stay in the destination
+        2. Why each area is recommended based on the traveler's profile
+        3.Flight recommendations if relevant
+        4. Airport transfer instructions
+        5. Public transportation advice
+        6. Estimated daily budget
+        7. Top attractions not to miss
+        8. Local foods to try
+        9. Safety tips
+        10. Weather considerations if relevant
+
+        Format the response clearly using:
+
+        Day 1
+        Day 2
+        Day 3
+        ...
+
+        Be practical and realistic.
+        
+
+============================================================
+ITINERARY
+============================================================
+
+**Trip Plan: Tel Aviv to Kiev (2 Days)**  
+**Traveler Profile:** Lenia (Moderate Budget, Low Walking Level, City Center Hotel Preference)  
+
+---
+
+### **1. Best Hotel Areas to Stay in Kiev**  
+**A. Maidan Nezalezhnosti (Independence Square)**  
+- **Why Recommended:** Central location, walkable to major landmarks (St. Sophia’s Cathedral, Kyiv Pechersk Lavra, and the Maidan Square). Easy access to metro (Kiev Metro Line 1 & 2).  
+- **Why for Lenia:** Low walking required; proximity to restaurants, cafes, and public transport.  
+
+**B. Kyiv Pecherska (near Kyiv Pechersk Lavra)**  
+- **Why Recommended:** Close to the iconic Kyiv Pechersk Lavra (monastery and catacombs), with easy metro access.  
+- **Why for Lenia:** Central, safe, and walkable.  
+
+---
+
+### **2. Flight Recommendations**  
+- **Best Option:** **Ukraine International Airlines (UIA)** or **Wizz Air** (direct flights from Tel Aviv to Kiev Boryspil Airport, KBP).  
+- **Flight Duration:** ~2.5–3 hours.  
+- **Budget Tip:** Book early for cheaper fares; check for direct flights (UIA often offers more reliable service).  
+
+---
+
+### **3. Airport Transfer Instructions**  
+- **From KBP (Boryspil Airport):**  
+  - **Taxi:** ~1 hour (€15–€25).  
+  - **Public Transport:** Take the **Kiev Metro Line 1** (Khimki–Kiev) to **Kiev Pechersk** station (1 hour, €1.50).  
+
+---
+
+### **4. Public Transportation Advice**  
+- **Kiev Metro:** Fast, clean, and affordable (€0.50 per ride). Use **contactless payment** or **smartcard**.  
+- **Buses/Trams:** Good for short distances; avoid during peak hours.  
+- **Taxis:** Use **Uber** or **Yandex.Taxi** for convenience; avoid unmarked cabs.  
+
+---
+
+### **5. Estimated Daily Budget**  
+- **Accommodation:** €80–€120 (City Center).  
+- **Meals:** €30–€50 (moderate budget).  
+- **Transportation:** €10–€20.  
+- **Total:** **€120–€200 per day**.  
+
+---
+
+### **6. Top Attractions Not to Miss**  
+- **St. Sophia’s Cathedral** (UNESCO World Heritage Site).  
+- **Kyiv Pechersk Lavra** (monastery and catacombs).  
+- **Maidan Nezalezhnosti** (Independence Square).  
+- **Kyiv City Council Building** (iconic architecture).  
+- **Kyiv Metro** (art deco stations like **Kiev Pechersk** and **Khreshchatyk**).  
+
+---
+
+### **7. Local Foods to Try**  
+- **Borscht** (buckwheat soup).  
+- **Varenyky** (dumplings, often with potato or cheese).  
+- **Holubtsi** (stuffed cabbage).  
+- **Pirozhki** (savory pastries).  
+- **Kutia** (traditional holiday dish, available in markets).  
+- **Kefir** (fermented milk drink).  
+
+---
+
+### **8. Safety Tips**  
+- Avoid carrying large amounts of cash; use cards.  
+- Be cautious of pickpockets in tourist areas (Maidan, Pechersk).  
+- Avoid isolated areas at night.  
+- Check for any travel advisories from your country’s embassy.  
+
+---
+
+### **9. Weather Considerations**  
+- **Spring (May):** Mild (15–20°C), but bring a light jacket.  
+- **Summer (July):** Warm (25–30°C), but UV protection is needed.  
+- **Winter (December):** Cold (−5°C to 5°C); pack warm layers.  
+
+---
+
+### **Day 1: Arrival & City Center Exploration**  
+**Morning Activities:**  
+- **Check-in at Hotel** (Maidan Nezalezhnosti or Pecherska area).  
+- **Lunch:** Try **Varenyky Restaurant** (near Maidan Square) for traditional dishes.  
+
+**Afternoon Activities:**  
+- **Visit St. Sophia’s Cathedral** (UNESCO site; €5 entry).  
+- **Explore Kyiv Pechersk Lavra** (monastery and catacombs; €5 entry).  
+- **Walk to Kyiv City Council Building** (photo op).  
+
+**Evening Activities:**  
+- **Dinner:** **Oleksa** (near Maidan Square) for modern Ukrainian cuisine.  
+- **Evening Stroll:** Maidan Nezalezhnosti for views of the Dnipro River.  
+
+**Transportation Tips:**  
+- Use metro for St. Sophia’s and Pechersk Lavra.  
+- Taxi for dinner (€10–€15).  
+
+---
+
+### **Day 2: Cultural & Historical Highlights**  
+**Morning Activities:**  
+- **Kyiv Metro Tour** (art deco stations like **Khreshchatyk** and **Kiev Pechersk**).  
+- **Visit Kyiv National University** (landmark with Soviet-era architecture).  
+
+**Afternoon Activities:**  
+- **Explore Kyiv Pechersk Lavra** (if not done earlier).  
+- **Maidan Nezalezhnosti** (visit the monument to Taras Shevchenko).  
+
+**Evening Activities:**  
+- **Dinner:** **Pirozhok** (near Pechersk) for street-style pirozhki.  
+- **Departure:** Head to Boryspil Airport (1 hour by metro/taxi).  
+
+**Transportation Tips:**  
+- Use metro for Kyiv Metro Tour.  
+- Taxi for airport transfer (€15–€25).  
+
+---
+
+**Final Notes:**  
+- Book flights early for best prices.  
+- Download the **Kiev Metro Map** for navigation.  
+- Enjoy the blend of history and modernity in Kiev! 🇺🇦

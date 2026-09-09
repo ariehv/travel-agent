@@ -1,0 +1,175 @@
+============================================================
+TRIP INFORMATION
+============================================================
+
+Trip ID: 2
+Origin: paris
+Destination: berlin
+Days: 2
+
+============================================================
+PROMPT
+============================================================
+
+
+        You are an experienced travel planner.
+
+        Traveler Profile:
+        Name: Lenia
+        Home Airport: TLV
+
+        Walking level:
+        moderate
+
+        Hotel preference:
+        ship
+
+        Budget:
+        Moderate
+        Previous trips:
+        - kiev
+- kiev 
+  
+    
+        Trip Information:
+        
+        Origin:
+        paris
+
+        Destination:
+        berlin
+
+        Duration:
+        2 days
+
+        Create a detailed day-by-day itinerary.
+
+        For each day include:
+
+        - Morning activities
+        - Afternoon activities
+        - Evening activities
+        - Recommended local food
+        - Transportation tips
+
+        Also include:
+
+        1. Best hotel areas to stay in the destination
+        2. Why each area is recommended based on the traveler's profile
+        3.Flight recommendations if relevant
+        4. Airport transfer instructions
+        5. Public transportation advice
+        6. Estimated daily budget
+        7. Top attractions not to miss
+        8. Local foods to try
+        9. Safety tips
+        10. Weather considerations if relevant
+
+        Format the response clearly using:
+
+        Day 1
+        Day 2
+        Day 3
+        ...
+
+        Be practical and realistic.
+        
+
+============================================================
+ITINERARY
+============================================================
+
+**Day 1: Arrival in Berlin**  
+**Morning Activities:**  
+- **Arrival at Berlin Tegel Airport (TXL)**: Land in the morning (flight duration ~1.5 hours from Paris).  
+- **Airport Transfer**: Take a taxi or public transport (BVG) to your hotel. A taxi is faster for moderate walking, but the U-Bahn (Line 1 to Warschauer Straße) is cost-effective (~€3.50).  
+- **Check-in at Hotel**: Stay near the **Spree River** (e.g., **Hotel Adlon Kempinski** in Mitte or **Berliner Hof Hotel** in Prenzlauer Berg).  
+
+**Afternoon Activities:**  
+- **Explore Mitte**: Walk to **Reichstag Building** (free entry, climb the dome for panoramic views) and **Berlin Cathedral**.  
+- **Lunch**: Try **Currywurst** at **Curry 30** (near the cathedral) or **Berliner Pfannkuchen** at **Pfannkuchenhaus**.  
+
+**Evening Activities:**  
+- **River Walk**: Stroll along the **Spree River** to **Potsdamer Platz** or **Gendarmenmarkt**.  
+- **Dinner**: Enjoy **Schnitzel** or **Döner** at **Restaurant Tegel** (near the airport) or **Biergarten am Spreeufer** for a riverside view.  
+
+**Recommended Local Food**:  
+- **Currywurst** (pork sausage with spicy sauce)  
+- **Berliner Pfannkuchen** (sweet pretzel)  
+- **Schnitzel mit Sauerkraut**  
+
+**Transportation Tips**:  
+- Use the **Berlin Transportation Card** (€15/day) for unlimited BVG travel.  
+- Walk 15–20 minutes to nearby attractions; moderate walking is manageable.  
+
+---
+
+**Day 2: Berlin Highlights**  
+**Morning Activities:**  
+- **Checkpoint Charlie Museum**: Learn about the Cold War (€12 entry).  
+- **East Side Gallery**: Walk the Berlin Wall’s artistic section (free).  
+
+**Afternoon Activities:**  
+- **Museum Island** (UNESCO site): Visit **Pergamon Museum** and **Neues Museum** (combined ticket €20).  
+- **Lunch**: Try **Kartoffelpuffer** (potato pancake) at **Kartoffelpuffer Berlin**.  
+
+**Evening Activities:**  
+- **Kurfürstendamm**: Stroll the famous street for shopping and dinner.  
+- **Dinner**: **Sachertorte** at **Sacher Berlin** or **Eis** (gelato) at **Gelato Scoop**.  
+
+**Transportation Tips**:  
+- Use the **Berlin Transportation Card** for seamless travel.  
+- Walk 20–30 minutes to major attractions; moderate walking is feasible.  
+
+---
+
+**1. Best Hotel Areas to Stay**  
+- **Mitte**: Central, near the Spree River, and major landmarks (Reichstag, Berlin Cathedral).  
+- **Prenzlauer Berg**: Quaint, trendy neighborhood with a mix of local cafes and shops.  
+
+**2. Why These Areas Are Recommended**  
+- **Mitte**: Ideal for moderate walkers due to proximity to key attractions and river views.  
+- **Prenzlauer Berg**: Offers a relaxed vibe with easy access to public transport and local eateries.  
+
+**3. Flight Recommendations**  
+- **Direct Flight**: Paris-CDG to Berlin-Tegel (TXL) or Berlin-Schönefeld (TXL is closer to the city center).  
+
+**4. Airport Transfer Instructions**  
+- **From TXL**: Take the U-Bahn (Line 1) to Warschauer Straße (15 mins, €3.50).  
+- **From Schönefeld**: Use the S-Bahn (Line S9) to Hauptbahnhof (30 mins, €5.50).  
+
+**5. Public Transportation Advice**  
+- **Berlin Transportation Card**: Valid for 24/48/72 hours; ideal for moderate walkers.  
+- **BVG App**: Check real-time schedules and route planning.  
+
+**6. Estimated Daily Budget**  
+- **Accommodation**: €120–€150 (Mitte/Prenzlauer Berg).  
+- **Food**: €40–€60 (inclusive of street food and restaurants).  
+- **Transport**: €10–€15 (card or individual tickets).  
+- **Total**: €170–€225/day.  
+
+**7. Top Attractions Not to Miss**  
+- **Reichstag Building**  
+- **Berlin Wall Memorials**  
+- **Museum Island**  
+- **East Side Gallery**  
+- **Potsdamer Platz**  
+
+**8. Local Foods to Try**  
+- **Currywurst**  
+- **Berliner Pfannkuchen**  
+- **Schnitzel mit Sauerkraut**  
+- **Kartoffelpuffer**  
+- **Sachertorte**  
+
+**9. Safety Tips**  
+- Avoid isolated areas at night; stick to well-lit, tourist-friendly zones.  
+- Keep valuables secure; pickpocketing can occur in crowded areas.  
+
+**10. Weather Considerations**  
+- **Spring/Fall**: Mild (10–18°C), bring a light jacket.  
+- **Winter**: Cold (0–5°C); pack warm layers.  
+- **Summer**: Warm (20–25°C); sunscreen recommended.  
+
+---  
+**Final Notes**: Adjust activities based on weather. Moderate walking is manageable, so prioritize cultural sites over long hikes. Enjoy the blend of history and modern Berlin! 🌍✨
