@@ -1,8 +1,10 @@
 from fastapi import FastAPI, HTTPException
-
+from app.api.schemas import TripCreate
+from app.travel_planner import TravelPlanner
 from app.repositories.trip_repository import (
     list_trips,
-    get_trip
+    get_trip,
+    delete_trip,
 )
 
 app = FastAPI(
@@ -52,4 +54,39 @@ def get_trip_by_id(trip_id: int):
         "destination": trip.destination,
         "days": trip.days,
         "itinerary": trip.itinerary
+    }
+@app.post("/trips")
+def create_trip(trip: TripCreate):
+
+    planner = TravelPlanner()
+
+    itinerary = planner.create_trip(
+        origin=trip.origin,
+        destination=trip.destination,
+        days=trip.days
+    )
+
+    return {
+        "origin": trip.origin,
+        "destination": trip.destination,
+        "days": trip.days,
+        "itinerary": itinerary
+    }
+
+
+
+@app.delete("/trips/{trip_id}")
+def delete_trip_endpoint(trip_id: int):
+
+    deleted = delete_trip(trip_id)
+
+    if not deleted:
+
+        raise HTTPException(
+            status_code=404,
+            detail="Trip not found"
+        )
+
+    return {
+        "message": f"Trip {trip_id} deleted successfully"
     }

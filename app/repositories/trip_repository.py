@@ -99,13 +99,20 @@ def delete_trip(trip_id):
         Trip.id == trip_id
     ).first()
 
-    if trip:
+    if not trip:
 
-        db.delete(trip)
+        db.close()
 
-        db.commit()
+        return False
+
+    db.delete(trip)
+
+    db.commit()
 
     db.close()
+
+    return True
+
 
 def update_trip(trip_id):
     from app.travel_planner import TravelPlanner
