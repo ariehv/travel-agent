@@ -2,13 +2,7 @@ from app.database import SessionLocal
 from app.models import Trip
 from sqlalchemy import or_
 
-
-def save_trip(
-    origin,
-    destination,
-    days,
-    itinerary
-):
+def save_trip(origin, destination, days,prompt, itinerary):
 
     db = SessionLocal()
 
@@ -16,6 +10,7 @@ def save_trip(
         origin=origin,
         destination=destination,
         days=days,
+        prompt=prompt,
         itinerary=itinerary
     )
 
@@ -27,6 +22,7 @@ def save_trip(
     db.close()
 
     return trip.id
+
 def get_trip(trip_id):
 
     db = SessionLocal()
