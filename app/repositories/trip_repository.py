@@ -176,3 +176,62 @@ def get_trip_history():
     db.close()
 
     return trips
+
+def update_trip_data(
+    trip_id,
+    origin=None,
+    destination=None,
+    days=None,
+    prompt=None,
+    itinerary=None
+):
+    db = SessionLocal()
+
+    trip = db.query(Trip).filter(
+        Trip.id == trip_id
+    ).first()
+
+    if not trip:
+        db.close()
+        return None
+
+    if origin is not None:
+        trip.origin = origin
+
+    if destination is not None:
+        trip.destination = destination
+
+    if days is not None:
+        trip.days = days
+
+    if prompt is not None:
+        trip.prompt = prompt
+
+    if itinerary is not None:
+        trip.itinerary = itinerary
+
+    db.commit()
+    db.refresh(trip)
+
+    db.close()
+
+    return trip
+
+def get_trip_stats():
+
+    db = SessionLocal()
+
+    trips = db.query(Trip).all()
+
+    total_trips = len(trips)
+
+    total_days = sum(
+        trip.days for trip in trips
+    )
+
+    db.close()
+
+    return {
+        "total_trips": total_trips,
+        "total_days": total_days
+    }

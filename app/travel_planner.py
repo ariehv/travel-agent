@@ -1,7 +1,10 @@
 from app.ai_agent import AIAgent
 from app.repositories.trip_repository import get_trip_history, save_trip
 from app.user_profile import UserProfile
-
+from app.repositories.trip_repository import (
+    get_trip,
+    update_trip_data
+)
 
 class TravelPlanner:
 
@@ -127,4 +130,34 @@ class TravelPlanner:
 
         return itinerary
 
-    
+    def update_trip(
+        self,
+        trip_id,
+        origin=None,
+        destination=None,
+        days=None
+    ):
+
+        trip = get_trip(trip_id)
+
+        if not trip:
+            return None
+
+        origin = origin or trip.origin
+        destination = destination or trip.destination
+        days = days or trip.days
+
+        prompt, itinerary = self.generate_itinerary(
+            origin,
+            destination,
+            days
+            )
+
+        return update_trip_data(
+            trip_id,
+            origin=origin,
+            destination=destination,
+            days=days,
+            prompt=prompt,
+            itinerary=itinerary
+        )

@@ -1,0 +1,217 @@
+============================================================
+TRIP INFORMATION
+============================================================
+
+Trip ID: 3
+Origin: paris
+Destination: madrid
+Days: 3
+
+============================================================
+PROMPT
+============================================================
+
+
+        You are an experienced travel planner.
+
+        Traveler Profile:
+        Name: Lenia
+        Home Airport: TLV
+
+        Walking level:
+        slowly
+
+        Hotel preference:
+        chipest
+
+        Budget:
+        Moderate
+        Previous trips:
+        - kiev
+- berlin
+- madrid
+- new york
+  
+    
+        Trip Information:
+        
+        Origin:
+        paris
+
+        Destination:
+        madrid
+
+        Duration:
+        3 days
+
+        Create a detailed day-by-day itinerary.
+
+        For each day include:
+
+        - Morning activities
+        - Afternoon activities
+        - Evening activities
+        - Recommended local food
+        - Transportation tips
+
+        Also include:
+
+        1. Best hotel areas to stay in the destination
+        2. Why each area is recommended based on the traveler's profile
+        3.Flight recommendations if relevant
+        4. Airport transfer instructions
+        5. Public transportation advice
+        6. Estimated daily budget
+        7. Top attractions not to miss
+        8. Local foods to try
+        9. Safety tips
+        10. Weather considerations if relevant
+
+        Format the response clearly using:
+
+        Day 1
+        Day 2
+        Day 3
+        ...
+
+        Be practical and realistic.
+        
+
+============================================================
+ITINERARY
+============================================================
+
+### **Day 1: Arrival & City Exploration**  
+**Morning Activities:**  
+- **Arrive at Madrid-Barajas Airport** (approx. 1 hour from Paris with a direct flight).  
+- **Transfer to Hotel:** Take a taxi or shuttle to the **Retiro district** (€10–15, 20–30 minutes). This area is centrally located, affordable, and close to major attractions.  
+- **Check into Hotel:** Stay at a budget hotel like **Hotel Ritz Madrid** (€60–€80/night) or **Hostal San Agustín** (€40–€60/night).  
+
+**Afternoon Activities:**  
+- **Retiro Park:** Walk slowly through the park (20–30 minutes), enjoy the lake, and relax.  
+- **Prado Museum (Free on Sundays):** Explore world-class art (€10–€15 for entry).  
+
+**Evening Activities:**  
+- **Plaza Mayor:** Stroll the historic square, shop for souvenirs, and enjoy tapas.  
+- **Dinner:** Try **Tortilla Española** (Spanish omelet) and **Croquetas** (breaded potato rolls) at a budget-friendly spot like **La Latina** or **Cervecería El Cubo**.  
+
+**Recommended Local Food:**  
+- **Tortilla Española**, **Croquetas**, **Gazpacho** (cold tomato soup).  
+
+**Transportation Tips:**  
+- Use **Madrid Metro** (€1.50 per ride) for short distances. Purchase a **T-Casual 72-hour pass** (€12) for unlimited travel.  
+- Avoid walking long distances; use taxis for transfers.  
+
+---
+
+### **Day 2: Cultural & Historical Exploration**  
+**Morning Activities:**  
+- **Royal Palace of Madrid:** Explore the opulent palace (€15–€20).  
+- **Walk to Plaza Mayor:** 15-minute stroll (avoid heavy bags).  
+
+**Afternoon Activities:**  
+- **Mercado de San Miguel:** Sample local snacks like **empanadas** and **churros**.  
+- **Puerta del Sol:** Visit the iconic square and the **Clock Tower**.  
+
+**Evening Activities:**  
+- **Dinner:** Try **Cocido Madrileño** (a hearty stew) at **Restaurante El Corte Inglés** or **Casa Botín** (reserve in advance).  
+- **Nightlife:** Enjoy live flamenco in a budget-friendly venue like **Café de La Luz**.  
+
+**Recommended Local Food:**  
+- **Cocido Madrileño**, **Empanadas**, **Churros con Chocolate**.  
+
+**Transportation Tips:**  
+- Use the **Madrid Metro** for most routes. The **T-Cas,ual pass** is cost-effective.  
+- Avoid walking in dark alleys; stick to well-lit areas.  
+
+---
+
+### **Day 3: Day Trip to Toledo**  
+**Morning Activities:**  
+- **Train to Toledo:** Take the **Renfe Alvia** train from **Madrid-Atocha Station** (€12–€15, 1 hour).  
+- **Explore Toledo:** Walk slowly through the medieval city (1–2 hours). Highlights: **Toledo Cathedral**, **Alcázar**, and **Museum of Religious Arts**.  
+
+**Afternoon Activities:**  
+- **Dinner in Toledo:** Try **Perrito** (a local favorite) for **Cordero Asado** (roast lamb).  
+- **Return to Madrid:** Take the same train back (€12–€15).  
+
+**Evening Activities:**  
+- **Return to Hotel:** Check out and relax.  
+- **Optional:** Visit **El Retiro Park** one last time for sunset.  
+
+**Recommended Local Food:**  
+- **Cordero Asado**, **Tarta de Santiago** (sweet bread), **Pan de Vino** (wine bread).  
+
+**Transportation Tips:**  
+- Book train tickets in advance via **Renfe** or **Omio**.  
+- Use a taxi from Toledo Station to your hotel if needed.  
+
+---
+
+### **1. Best Hotel Areas to Stay**  
+- **Retiro District:** Central, affordable, and close to major attractions.  
+- **Centro District:** Slightly pricier but offers more budget options.  
+
+**Why Recommended for Lenia:**  
+- **Retiro** is walkable to parks, museums, and markets.  
+- **Centro** has better public transport links but may be busier.  
+
+---
+
+### **2. Flight Recommendations**  
+- **Low-Cost Carrier:** **Air Europa** (direct flights from Paris-CDG to Madrid-Barajas, ~€120–€150 round-trip).  
+- **Alternative:** **Iberia** or **easyJet** for slightly higher prices.  
+
+---
+
+### **3. Airport Transfer Instructions**  
+- **From Madrid-Barajas to Retiro:**  
+  - **Taxi:** €10–15 (20–30 minutes).  
+  - **Shuttle:** €8–12 (25–40 minutes).  
+  - **Metro:** Take Line 8 to **Retiro Station** (€1.50, 30 minutes).  
+
+---
+
+### **4. Public Transportation Advice**  
+- **T-Casual Pass:** €12 for 72 hours (covers all metro, buses, and trains).  
+- **App:** Use **Google Maps** or **Moovit** for real-time navigation.  
+
+---
+
+### **5. Estimated Daily Budget**  
+- **Accommodation:** €50–€80  
+- **Food:** €30–€40  
+- **Transport:** €10–€15  
+- **Attractions:** €15–€25  
+- **Total:** **€105–€170/day**  
+
+---
+
+### **6. Top Attractions Not to Miss**  
+- **Prado Museum**  
+- **Royal Palace of Madrid**  
+- **Retiro Park**  
+- **Toledo** (day trip)  
+- **Mercado de San Miguel**  
+
+---
+
+### **7. Local Foods to Try**  
+- **Tortilla Española**, **Croquetas**, **Gazpacho**, **Cocido Madrileño**, **Cordero Asado**, **Churros con Chocolate**.  
+
+---
+
+### **8. Safety Tips**  
+- Avoid carrying large amounts of cash; use hotel safes.  
+- Stay alert in crowded areas (e.g., markets).  
+- Use official taxis or ride-hailing apps.  
+
+---
+
+### **9. Weather Considerations**  
+- **Spring (March–May):** Mild (15–22°C), sunny. Pack light clothing, a light jacket, and sunscreen.  
+- **Summer:** Hot (25–35°C); avoid midday sun.  
+
+--- 
+
+This itinerary balances budget, comfort, and cultural immersion while accommodating Lenia’s walking pace and preferences. Safe travels! 🌍✨
