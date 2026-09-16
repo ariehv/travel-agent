@@ -5,6 +5,8 @@ from app.repositories.trip_repository import (
     get_trip,
     update_trip_data
 )
+from app.agents.hotel_agent import HotelAgent
+from app.agents.flight_agent import FlightAgent
 
 class TravelPlanner:
 
@@ -12,6 +14,8 @@ class TravelPlanner:
         
         self.profile = UserProfile()
         self.ai = AIAgent()
+        self.hotel_agent = HotelAgent()
+        self.flight_agent = FlightAgent()
 
     def get_trip_history(self):
     
@@ -36,10 +40,34 @@ class TravelPlanner:
 
             history_text += (
             f"- {trip.destination}\n"
+            f"({trip.days} days)\n"
     ) 
+
+        hotel_info = self.hotel_agent.search(
+            destination
+    )
+        flight_info = self.flight_agent.search(
+            origin,
+            destination
+    )
+
+        
         prompt = f"""
         You are an experienced travel planner.
+        Previous trips:
+        {history_text}
 
+        Hotel Recommendation:
+        Hotel: {hotel_info['hotel']}
+        Price: ${hotel_info['price']}
+
+        Flight Recommendation:
+        Route: {flight_info['route']}
+        The traveler has already visited
+        the destinations listed above.
+
+        Avoid repeating the same generic
+        recommendations.
         Traveler Profile:
         Name: {self.profile.preferences['name']}
         Home Airport: {self.profile.preferences['home_airport']}
@@ -52,8 +80,7 @@ class TravelPlanner:
 
         Budget:
         {self.profile.preferences['budget']}
-        Previous trips:
-        {history_text}  
+        
     
         Trip Information:
         

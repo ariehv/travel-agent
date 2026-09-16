@@ -61,6 +61,7 @@ def get_trip_by_id(trip_id: int):
         "origin": trip.origin,
         "destination": trip.destination,
         "days": trip.days,
+        "prompt": trip.prompt,
         "itinerary": trip.itinerary
     }
 @app.post("/trips")

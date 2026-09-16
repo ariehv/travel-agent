@@ -1,6 +1,7 @@
 from app.database import SessionLocal
 from app.models import Trip
 from sqlalchemy import or_
+from collections import Counter
 
 def save_trip(origin, destination, days,prompt, itinerary):
 
@@ -228,10 +229,30 @@ def get_trip_stats():
     total_days = sum(
         trip.days for trip in trips
     )
+    destination_counts = Counter(
+    trip.destination
+    for trip in trips
+    )
 
+    top_destinations = [
+        destination
+        for destination, count
+        in destination_counts.most_common(3)
+    ]
+    
+    average_trip_days = (
+        total_days / total_trips
+            if total_trips > 0
+            else 0
+        )
     db.close()
 
     return {
-        "total_trips": total_trips,
-        "total_days": total_days
-    }
+    "total_trips": total_trips,
+    "total_days": total_days,
+    "average_trip_days": round(
+        average_trip_days,
+        1
+    ),
+    "top_destinations": top_destinations
+    }   
