@@ -3,17 +3,33 @@ from app.models import Trip
 from sqlalchemy import or_
 from collections import Counter
 
-def save_trip(origin, destination, days,prompt, itinerary):
+def save_trip(
+    origin,
+    destination,
+    days,
+    prompt,
+    itinerary,
+    food_guide,
+    packing_list,
+    hidden_gems,
+    emergency_plan,
+    optimized_itinerary
+):
 
     db = SessionLocal()
 
     trip = Trip(
-        origin=origin,
-        destination=destination,
-        days=days,
-        prompt=prompt,
-        itinerary=itinerary
-    )
+    origin=origin,
+    destination=destination,
+    days=days,
+    prompt=prompt,
+    itinerary=itinerary,
+    food_guide=food_guide,
+    packing_list=packing_list,
+    hidden_gems=hidden_gems,
+    emergency_plan=emergency_plan,
+    optimized_itinerary=optimized_itinerary
+)
 
     db.add(trip)
     db.commit()
@@ -184,7 +200,12 @@ def update_trip_data(
     destination=None,
     days=None,
     prompt=None,
-    itinerary=None
+    itinerary=None,
+    food_guide=None,
+    packing_list=None,
+    hidden_gems=None,
+    emergency_plan=None,
+    optimized_itinerary=None
 ):
     db = SessionLocal()
 
@@ -210,6 +231,21 @@ def update_trip_data(
 
     if itinerary is not None:
         trip.itinerary = itinerary
+
+    if food_guide is not None:
+        trip.food_guide = food_guide
+
+    if packing_list is not None:
+        trip.packing_list = packing_list
+
+    if hidden_gems is not None:
+        trip.hidden_gems = hidden_gems
+
+    if emergency_plan is not None:
+        trip.emergency_plan = emergency_plan
+
+    if optimized_itinerary is not None:
+        trip.optimized_itinerary = optimized_itinerary
 
     db.commit()
     db.refresh(trip)
@@ -256,3 +292,18 @@ def get_trip_stats():
     ),
     "top_destinations": top_destinations
     }   
+
+def get_visited_destinations():
+
+    db = SessionLocal()
+
+    trips = db.query(Trip).all()
+
+    destinations = [
+        trip.destination
+        for trip in trips
+    ]
+
+    db.close()
+
+    return destinations

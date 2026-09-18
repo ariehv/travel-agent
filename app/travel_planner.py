@@ -1,3 +1,4 @@
+from app.agents.packing_agent import PackingAgent
 from app.ai_agent import AIAgent
 from app.repositories.trip_repository import get_trip_history, save_trip
 from app.user_profile import UserProfile
@@ -7,6 +8,11 @@ from app.repositories.trip_repository import (
 )
 from app.agents.hotel_agent import HotelAgent
 from app.agents.flight_agent import FlightAgent
+from app.agents.budget_agent import BudgetAgent
+from app.agents.hidden_gems_agent import HiddenGemsAgent
+from app.agents.emergency_agent import EmergencyAgent
+from app.agents.optimizer_agent import OptimizerAgent
+from app.agents.food_agent import FoodAgent
 
 class TravelPlanner:
 
@@ -16,6 +22,12 @@ class TravelPlanner:
         self.ai = AIAgent()
         self.hotel_agent = HotelAgent()
         self.flight_agent = FlightAgent()
+        self.budget_agent = BudgetAgent()
+        self.packing_agent = PackingAgent()
+        self.hidden_gems_agent = HiddenGemsAgent()
+        self.emergency_agent = EmergencyAgent()
+        self.optimizer_agent = OptimizerAgent()
+        self.food_agent = FoodAgent()
 
     def get_trip_history(self):
     
@@ -50,8 +62,81 @@ class TravelPlanner:
             origin,
             destination
     )
+        budget_info = self.budget_agent.estimate(
+            self.profile.preferences['budget'],
+        )
 
-        
+        food_prompt = self.food_agent.build_prompt(
+            destination
+        )
+        food_guide = self.ai.ask(
+            food_prompt
+        )
+        packing_prompt = self.packing_agent.build_prompt(
+            destination,
+            days
+        )
+
+        packing_list = self.ai.ask(
+            packing_prompt
+        )
+
+        hidden_prompt = (
+            self.hidden_gems_agent.build_prompt(
+                destination
+            )
+        )
+
+        hidden_gems = self.ai.ask(
+            hidden_prompt
+        )
+
+
+        emergency_prompt = (
+            self.emergency_agent.build_prompt(
+                destination
+        )
+    )   
+
+        emergency_plan = self.ai.ask(
+            emergency_prompt
+        )
+
+        optimizer_prompt = (
+            self.optimizer_agent.build_prompt(
+                destination,
+                days
+        )
+)
+
+        optimized_itinerary = self.ai.ask(
+             optimizer_prompt
+)
+
+
+        print("\nPacking List:")
+        print("-" * 40)
+        print(packing_list)
+        print("-" * 40)
+        print("\nFood Guide:")
+        print("-" * 40)
+        print(food_guide)
+        print("-" * 40) 
+        print("\nHidden Gems:")
+        print("-" * 40)
+        print(hidden_gems)
+        print("-" * 40) 
+        print("\nEmergency Plan:")
+        print("-" * 40)
+        print(emergency_plan)
+        print("-" * 40) 
+        print("\nOptimized Itinerary:")
+        print("-" * 40)
+        print(optimized_itinerary)
+        print("-" * 40) 
+
+
+
         prompt = f"""
         You are an experienced travel planner.
         Previous trips:
@@ -63,11 +148,19 @@ class TravelPlanner:
 
         Flight Recommendation:
         Route: {flight_info['route']}
+        
         The traveler has already visited
         the destinations listed above.
 
-        Avoid repeating the same generic
-        recommendations.
+        Avoid recommending attractions that
+        appear in those previous itineraries.
+
+        Prefer new experiences and different
+        neighborhoods when possible.
+
+        Take the travel history into account
+        when creating recommendations.
+
         Traveler Profile:
         Name: {self.profile.preferences['name']}
         Home Airport: {self.profile.preferences['home_airport']}
@@ -78,8 +171,8 @@ class TravelPlanner:
         Hotel preference:
         {self.profile.preferences['hotel_type']}
 
-        Budget:
-        {self.profile.preferences['budget']}
+        Budget Recommendation:
+        Expected Daily Spending: {budget_info}
         
     
         Trip Information:
@@ -132,8 +225,15 @@ class TravelPlanner:
 
         itinerary = self.ai.ask(prompt)
         
-        return prompt,itinerary
-    
+        return (
+            prompt,
+            itinerary,
+            food_guide,
+            packing_list,
+            hidden_gems,
+            emergency_plan,
+            optimized_itinerary
+        )
     def create_trip(
         self,
         origin,
@@ -141,21 +241,36 @@ class TravelPlanner:
         days
     ):
 
-        
-        prompt, itinerary = self.generate_itinerary(origin, destination, days)
-        
+        (
+            prompt,
+            itinerary,
+            food_guide,
+            packing_list,
+            hidden_gems,
+            emergency_plan,
+            optimized_itinerary
+        ) = self.generate_itinerary(
+            origin,
+            destination,
+            days
+        )
 
         trip_id = save_trip(
             origin,
             destination,
             days,
             prompt,
-            itinerary
+            itinerary,
+            food_guide,
+            packing_list,
+            hidden_gems,
+            emergency_plan,
+            optimized_itinerary
         )
 
         print(f"Trip saved with ID {trip_id}")
 
-        return itinerary
+        return itinerary    
 
     def update_trip(
         self,
@@ -174,17 +289,29 @@ class TravelPlanner:
         destination = destination or trip.destination
         days = days or trip.days
 
-        prompt, itinerary = self.generate_itinerary(
+        (
+            prompt,
+            itinerary,
+            food_guide,
+            packing_list,
+            hidden_gems,
+            emergency_plan,
+            optimized_itinerary
+        ) = self.generate_itinerary(
             origin,
             destination,
             days
-            )
-
+        )
         return update_trip_data(
             trip_id,
             origin=origin,
             destination=destination,
             days=days,
             prompt=prompt,
-            itinerary=itinerary
+            itinerary=itinerary,
+            food_guide=food_guide,
+            packing_list=packing_list,
+            hidden_gems=hidden_gems,
+            emergency_plan=emergency_plan,
+            optimized_itinerary=optimized_itinerary
         )

@@ -4,8 +4,8 @@ TRIP INFORMATION
 
 Trip ID: 1
 Origin: Tel Aviv
-Destination: kiev
-Days: 2
+Destination: varna
+Days: 1
 
 ============================================================
 PROMPT
@@ -13,21 +13,41 @@ PROMPT
 
 
         You are an experienced travel planner.
+        Previous trips:
+        
+
+        Hotel Recommendation:
+        Hotel: Central Hotel
+        Price: $120
+
+        Flight Recommendation:
+        Route: Tel Aviv → Madrid → varna
+        
+        The traveler has already visited
+        the destinations listed above.
+
+        Avoid recommending attractions that
+        appear in those previous itineraries.
+
+        Prefer new experiences and different
+        neighborhoods when possible.
+
+        Take the travel history into account
+        when creating recommendations.
 
         Traveler Profile:
         Name: Lenia
         Home Airport: TLV
 
         Walking level:
-        Low
+        low
 
         Hotel preference:
-        City Center
+        city center
 
-        Budget:
-        Moderate
-        Previous trips:
-          
+        Budget Recommendation:
+        Expected Daily Spending: $100-$200 per day
+        
     
         Trip Information:
         
@@ -35,10 +55,10 @@ PROMPT
         Tel Aviv
 
         Destination:
-        kiev
+        varna
 
         Duration:
-        2 days
+        1 days
 
         Create a detailed day-by-day itinerary.
 
@@ -77,125 +97,105 @@ PROMPT
 ITINERARY
 ============================================================
 
-**Trip Plan: Tel Aviv to Kiev (2 Days)**  
-**Traveler Profile:** Lenia (Moderate Budget, Low Walking Level, City Center Hotel Preference)  
+**Trip Summary**  
+**Origin:** Tel Aviv  
+**Destination:** Varna (Bulgaria)  
+**Duration:** 1 day  
+**Flight:** Tel Aviv → Madrid → Varna (via Madrid, final destination: Varna)  
+**Hotel:** Central Hotel (city center, $120/night)  
+**Budget:** $100–$200/day  
 
 ---
 
-### **1. Best Hotel Areas to Stay in Kiev**  
-**A. Maidan Nezalezhnosti (Independence Square)**  
-- **Why Recommended:** Central location, walkable to major landmarks (St. Sophia’s Cathedral, Kyiv Pechersk Lavra, and the Maidan Square). Easy access to metro (Kiev Metro Line 1 & 2).  
-- **Why for Lenia:** Low walking required; proximity to restaurants, cafes, and public transport.  
+### **Day 1: Varna – A Coastal Cultural Escape**  
+**Morning Activities**  
+- **Start with the Ancient City of Varna** (UNESCO World Heritage Site): Explore the 6th-century BC Thracian necropolis, including the Golden Horns and tomb of Queen Pero. The site is near the city center, accessible by taxi or shuttle.  
+- **Visit the Varna Archaeological Museum** (adjacent to the necropolis): View artifacts from the ancient city, including gold treasures.  
 
-**B. Kyiv Pecherska (near Kyiv Pechersk Lavra)**  
-- **Why Recommended:** Close to the iconic Kyiv Pechersk Lavra (monastery and catacombs), with easy metro access.  
-- **Why for Lenia:** Central, safe, and walkable.  
+**Afternoon Activities**  
+- **Varna Beach**: Relax on the Black Sea shore or stroll along the promenade. Rent a sunbed or take a scenic walk.  
+- **Explore the Central Market (Knyazheski Dvor)**: Wander through the historic Old Town, shop for local crafts, and enjoy street food.  
 
----
+**Evening Activities**  
+- **Dinner at a Local Restaurant**: Try **"Varna Restaurant"** for grilled mussels, banitsa, and Bulgarian wine.  
+- **Evening Walk**: Stroll along the **Varna Beach promenade** for sunset views.  
 
-### **2. Flight Recommendations**  
-- **Best Option:** **Ukraine International Airlines (UIA)** or **Wizz Air** (direct flights from Tel Aviv to Kiev Boryspil Airport, KBP).  
-- **Flight Duration:** ~2.5–3 hours.  
-- **Budget Tip:** Book early for cheaper fares; check for direct flights (UIA often offers more reliable service).  
+**Recommended Local Food**  
+- **Banitsa**: A flaky cheese pie.  
+- **Tarator**: A creamy yogurt dip with cucumber.  
+- **Grilled mussels**: A local favorite with garlic and herbs.  
+- **Bulgarian coffee**: Strong and aromatic, often served with a sweet treat.  
 
----
-
-### **3. Airport Transfer Instructions**  
-- **From KBP (Boryspil Airport):**  
-  - **Taxi:** ~1 hour (€15–€25).  
-  - **Public Transport:** Take the **Kiev Metro Line 1** (Khimki–Kiev) to **Kiev Pechersk** station (1 hour, €1.50).  
-
----
-
-### **4. Public Transportation Advice**  
-- **Kiev Metro:** Fast, clean, and affordable (€0.50 per ride). Use **contactless payment** or **smartcard**.  
-- **Buses/Trams:** Good for short distances; avoid during peak hours.  
-- **Taxis:** Use **Uber** or **Yandex.Taxi** for convenience; avoid unmarked cabs.  
+**Transportation Tips**  
+- **Airport Transfer**: Take a taxi from Varna Airport (VAR) to the city center (~€15–€20). Alternatively, use a shuttle service.  
+- **Public Transport**: Buses are limited but available (e.g., Line 1 to the Old Town). For ease, use taxis or ride-sharing apps.  
 
 ---
 
-### **5. Estimated Daily Budget**  
-- **Accommodation:** €80–€120 (City Center).  
-- **Meals:** €30–€50 (moderate budget).  
-- **Transportation:** €10–€20.  
-- **Total:** **€120–€200 per day**.  
+### **Best Hotel Areas to Stay in Varna**  
+1. **Old Town (Knyazheski Dvor)**  
+   - **Why Recommended**: Central location near the Ancient City and Central Market. Rich history, boutique hotels, and easy access to attractions. Ideal for low walking levels due to short distances.  
+
+2. **Central District (Tsentralno)**  
+   - **Why Recommended**: Vibrant area with modern amenities, cafes, and proximity to the beach. Great for travelers seeking convenience and a mix of culture and relaxation.  
 
 ---
 
-### **6. Top Attractions Not to Miss**  
-- **St. Sophia’s Cathedral** (UNESCO World Heritage Site).  
-- **Kyiv Pechersk Lavra** (monastery and catacombs).  
-- **Maidan Nezalezhnosti** (Independence Square).  
-- **Kyiv City Council Building** (iconic architecture).  
-- **Kyiv Metro** (art deco stations like **Kiev Pechersk** and **Khreshchatyk**).  
+### **Flight Recommendations**  
+- **Tel Aviv → Madrid → Varna**: The flight includes a layover in Madrid. Book a direct flight from Tel Aviv to Varna if available (check for seasonal options).  
 
 ---
 
-### **7. Local Foods to Try**  
-- **Borscht** (buckwheat soup).  
-- **Varenyky** (dumplings, often with potato or cheese).  
-- **Holubtsi** (stuffed cabbage).  
-- **Pirozhki** (savory pastries).  
-- **Kutia** (traditional holiday dish, available in markets).  
-- **Kefir** (fermented milk drink).  
+### **Airport Transfer Instructions**  
+- **From Varna Airport (VAR)**: Take a taxi or shuttle to the Old Town or Central District (10–15 minutes). Avoid walking due to limited sidewalks and traffic.  
 
 ---
 
-### **8. Safety Tips**  
-- Avoid carrying large amounts of cash; use cards.  
-- Be cautious of pickpockets in tourist areas (Maidan, Pechersk).  
-- Avoid isolated areas at night.  
-- Check for any travel advisories from your country’s embassy.  
+### **Public Transportation Advice**  
+- **Buses**: Limited coverage; use for short trips (e.g., to the Old Town).  
+- **Taxis/Ride-Sharing**: Most practical for travelers with low walking ability.  
 
 ---
 
-### **9. Weather Considerations**  
-- **Spring (May):** Mild (15–20°C), but bring a light jacket.  
-- **Summer (July):** Warm (25–30°C), but UV protection is needed.  
-- **Winter (December):** Cold (−5°C to 5°C); pack warm layers.  
+### **Estimated Daily Budget**  
+- **Hotel**: $120  
+- **Meals**: $50–$70 (breakfast, lunch, dinner)  
+- **Transport**: $20–$30 (taxi/shuttle)  
+- **Activities**: $30–$50 (museum entry, snacks)  
+- **Total**: **$200–$270**  
 
 ---
 
-### **Day 1: Arrival & City Center Exploration**  
-**Morning Activities:**  
-- **Check-in at Hotel** (Maidan Nezalezhnosti or Pecherska area).  
-- **Lunch:** Try **Varenyky Restaurant** (near Maidan Square) for traditional dishes.  
-
-**Afternoon Activities:**  
-- **Visit St. Sophia’s Cathedral** (UNESCO site; €5 entry).  
-- **Explore Kyiv Pechersk Lavra** (monastery and catacombs; €5 entry).  
-- **Walk to Kyiv City Council Building** (photo op).  
-
-**Evening Activities:**  
-- **Dinner:** **Oleksa** (near Maidan Square) for modern Ukrainian cuisine.  
-- **Evening Stroll:** Maidan Nezalezhnosti for views of the Dnipro River.  
-
-**Transportation Tips:**  
-- Use metro for St. Sophia’s and Pechersk Lavra.  
-- Taxi for dinner (€10–€15).  
+### **Top Attractions Not to Miss**  
+1. **Ancient City of Varna** (UNESCO Site)  
+2. **Varna Archaeological Museum**  
+3. **Varna Beach**  
+4. **Central Market (Knyazheski Dvor)**  
+5. **Varna National Park** (for nature lovers)  
 
 ---
 
-### **Day 2: Cultural & Historical Highlights**  
-**Morning Activities:**  
-- **Kyiv Metro Tour** (art deco stations like **Khreshchatyk** and **Kiev Pechersk**).  
-- **Visit Kyiv National University** (landmark with Soviet-era architecture).  
-
-**Afternoon Activities:**  
-- **Explore Kyiv Pechersk Lavra** (if not done earlier).  
-- **Maidan Nezalezhnosti** (visit the monument to Taras Shevchenko).  
-
-**Evening Activities:**  
-- **Dinner:** **Pirozhok** (near Pechersk) for street-style pirozhki.  
-- **Departure:** Head to Boryspil Airport (1 hour by metro/taxi).  
-
-**Transportation Tips:**  
-- Use metro for Kyiv Metro Tour.  
-- Taxi for airport transfer (€15–€25).  
+### **Local Foods to Try**  
+- **Banitsa**  
+- **Tarator**  
+- **Grilled mussels**  
+- **Bulgarian coffee**  
+- **Simit** (sesame bread)  
 
 ---
 
-**Final Notes:**  
-- Book flights early for best prices.  
-- Download the **Kiev Metro Map** for navigation.  
-- Enjoy the blend of history and modernity in Kiev! 🇺🇦
+### **Safety Tips**  
+- Keep valuables secure in hotels or taxis.  
+- Avoid walking alone at night near the beach.  
+- Be cautious with street vendors; opt for reputable restaurants.  
+
+---
+
+### **Weather Considerations**  
+- **Summer (June–August)**: Warm and sunny; pack light clothing and sunscreen.  
+- **Spring/Fall (March–May, September–November)**: Mild; bring a light jacket.  
+- **Winter (December–February)**: Cold and wet; avoid outdoor activities unless necessary.  
+
+--- 
+
+**Final Note:** Varna offers a blend of history, culture, and coastal relaxation. With its UNESCO sites and vibrant markets, it’s a perfect one-day escape for travelers seeking new experiences. Enjoy! 🌊🏛️

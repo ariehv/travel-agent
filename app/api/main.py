@@ -15,6 +15,10 @@ from app.repositories.profile_repository import (
     get_profile,
     update_profile
 )
+from app.repositories.recommendation_repository import (
+    get_recommendations
+)
+
 app = FastAPI(
     title="Travel Agent API"
 )
@@ -179,4 +183,14 @@ def update_profile_endpoint(
         "budget": updated_profile.budget,
         "walking_level": updated_profile.walking_level,
         "hotel_preference": updated_profile.hotel_preference
+    }
+
+@app.get("/recommendations")
+def recommendations():
+
+    recommendations = get_recommendations()
+
+    return {
+        "recommended_destinations":
+            recommendations
     }

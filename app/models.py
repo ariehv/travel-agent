@@ -20,6 +20,14 @@ class Trip(Base):
 
     itinerary = Column(Text)
 
+    food_guide = Column(Text)
+    
+    packing_list = Column(Text)
+    hidden_gems = Column(Text)
+    emergency_plan= Column(Text)
+    optimized_itinerary = Column(Text)
+        
+
 
 class UserProfile(Base):
 
@@ -36,3 +44,5 @@ class UserProfile(Base):
     walking_level = Column(String)
 
     hotel_preference = Column(String)
+
+    

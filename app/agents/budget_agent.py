@@ -1,10 +1,14 @@
 class BudgetAgent:
 
-    def calculate(self):
+    def estimate(self, budget_level):
 
-        return {
-            "flights": 800,
-            "hotel": 1200,
-            "food": 400,
-            "total": 2400
-        }
+        if budget_level == "budget":
+            return "$50-$100 per day"
+
+        if budget_level == "moderate":
+            return "$100-$200 per day"
+
+        if budget_level == "luxury":
+            return "$250-$500 per day"
+
+        return "Unknown"
