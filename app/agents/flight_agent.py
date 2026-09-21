@@ -1,9 +1,19 @@
 class FlightAgent:
 
-    def search(self, origin, destination):
+    def build_prompt(
+        self,
+        origin,
+        destination
+    ):
 
-        return {
-            "origin": origin,
-            "destination": destination,
-            "route": f"{origin} → Madrid → {destination}"
-        }
+        return f"""
+        Suggest realistic flight routes from {origin} to {destination}.
+
+        Include:
+
+        - Direct flights if available           
+        - Common connection airports
+        - Typical flight duration
+        - Recommended airlines
+        - Airport codes
+        """

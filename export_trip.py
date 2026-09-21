@@ -38,11 +38,42 @@ with open(filename, "w", encoding="utf-8") as f:
         f.write(trip.prompt)
         f.write("\n\n")
 
-    f.write("=" * 60 + "\n")
-    f.write("ITINERARY\n")
-    f.write("=" * 60 + "\n\n")
+        f.write("=" * 60 + "\n")
+        f.write("ITINERARY\n")
+        f.write("=" * 60 + "\n\n")
 
-    f.write(trip.itinerary)
+        f.write(trip.itinerary)
+
+        f.write("\n\n")
+
+        f.write("=" * 60 + "\n")
+        f.write("FOOD GUIDE\n")
+        f.write("=" * 60 + "\n\n")
+        f.write(trip.food_guide or "")
+        f.write("\n\n")
+
+        f.write("=" * 60 + "\n")
+        f.write("PACKING LIST\n")
+        f.write("=" * 60 + "\n\n")
+        f.write(trip.packing_list or "")
+        f.write("\n\n")
+
+        f.write("=" * 60 + "\n")
+        f.write("HIDDEN GEMS\n")
+        f.write("=" * 60 + "\n\n")
+        f.write(trip.hidden_gems or "")
+        f.write("\n\n")
+
+        f.write("=" * 60 + "\n")
+        f.write("EMERGENCY PLAN\n")
+        f.write("=" * 60 + "\n\n")
+        f.write(trip.emergency_plan or "")
+        f.write("\n\n")
+
+        f.write("=" * 60 + "\n")
+        f.write("OPTIMIZED ITINERARY\n")
+        f.write("=" * 60 + "\n\n")
+        f.write(trip.optimized_itinerary or "")
 
 print()
 print(f"Trip exported to {filename}")

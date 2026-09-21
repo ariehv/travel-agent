@@ -45,7 +45,7 @@ class TravelPlanner:
 
     def generate_itinerary(self, origin, destination, days): 
 
-        history = get_trip_history() 
+        history = self.get_trip_history()
         history_text = ""
 
         for trip in history:
@@ -55,17 +55,28 @@ class TravelPlanner:
             f"({trip.days} days)\n"
     ) 
 
-        hotel_info = self.hotel_agent.search(
-            destination
-    )
-        flight_info = self.flight_agent.search(
-            origin,
-            destination
-    )
+        
+        
         budget_info = self.budget_agent.estimate(
             self.profile.preferences['budget'],
         )
 
+        hotel_prompt = self.hotel_agent.build_prompt(
+            destination
+        )
+
+        hotel_info = self.ai.ask(
+            hotel_prompt
+        )
+
+        flight_prompt = self.flight_agent.build_prompt(
+            origin,
+            destination
+        )
+
+        flight_info = self.ai.ask(
+            flight_prompt
+        )
         food_prompt = self.food_agent.build_prompt(
             destination
         )
@@ -143,11 +154,10 @@ class TravelPlanner:
         {history_text}
 
         Hotel Recommendation:
-        Hotel: {hotel_info['hotel']}
-        Price: ${hotel_info['price']}
+        {hotel_info}
 
         Flight Recommendation:
-        Route: {flight_info['route']}
+        {flight_info}
         
         The traveler has already visited
         the destinations listed above.

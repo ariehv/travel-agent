@@ -1,9 +1,14 @@
 class HotelAgent:
 
-    def search(self, city):
+    def build_prompt(self, destination):
 
-        return {
-            "city": city,
-            "hotel": "Central Hotel",
-            "price": 120
-        }
+        return f"""
+        Recommend hotel areas in {destination}.
+
+        Include:
+
+        - Area name
+        - Budget level
+        - Advantages
+        - Walking friendliness
+        """
