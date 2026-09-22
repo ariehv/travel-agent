@@ -1,4 +1,5 @@
 from app.agents.packing_agent import PackingAgent
+from app.agents.weather_agent import WeatherAgent
 from app.ai_agent import AIAgent
 from app.repositories.trip_repository import get_trip_history, save_trip
 from app.user_profile import UserProfile
@@ -13,6 +14,11 @@ from app.agents.hidden_gems_agent import HiddenGemsAgent
 from app.agents.emergency_agent import EmergencyAgent
 from app.agents.optimizer_agent import OptimizerAgent
 from app.agents.food_agent import FoodAgent
+from app.agents.validation_agent import ValidationAgent
+from app.agents.currency_agent import CurrencyAgent
+from app.agents.visa_agent import VisaAgent
+from app.agents.local_transport_agent import LocalTransportAgent
+
 
 class TravelPlanner:
 
@@ -28,6 +34,13 @@ class TravelPlanner:
         self.emergency_agent = EmergencyAgent()
         self.optimizer_agent = OptimizerAgent()
         self.food_agent = FoodAgent()
+        self.validation_agent = ValidationAgent()
+        self.weather_agent = WeatherAgent()
+        self.currency_agent = CurrencyAgent()
+        self.visa_agent = VisaAgent()
+        self.local_transport_agent = LocalTransportAgent()
+
+        
 
     def get_trip_history(self):
     
@@ -83,6 +96,25 @@ class TravelPlanner:
         food_guide = self.ai.ask(
             food_prompt
         )
+        currency_prompt = self.currency_agent.build_prompt(
+            destination
+        )
+        currency_guide = self.ai.ask(
+            currency_prompt
+        )
+        visa_prompt = self.visa_agent.build_prompt(
+            self.profile.origin,
+            destination
+        )
+        visa_guide = self.ai.ask(
+            visa_prompt
+        )
+        local_transport_prompt = self.local_transport_agent.build_prompt(
+            destination
+        )
+        local_transport_guide = self.ai.ask(
+            local_transport_prompt
+        )       
         packing_prompt = self.packing_agent.build_prompt(
             destination,
             days
@@ -123,7 +155,14 @@ class TravelPlanner:
         optimized_itinerary = self.ai.ask(
              optimizer_prompt
 )
-
+        weather_prompt = (
+            self.weather_agent.build_prompt(
+                destination
+            )
+        )
+        weather_guide = self.ai.ask(
+            weather_prompt
+        )
 
         print("\nPacking List:")
         print("-" * 40)
@@ -145,6 +184,22 @@ class TravelPlanner:
         print("-" * 40)
         print(optimized_itinerary)
         print("-" * 40) 
+        print("\nWeather Guide:")   
+        print("-" * 40)
+        print(weather_guide)
+        print("-" * 40) 
+        print("\nCurrency Guide:")
+        print("-" * 40)
+        print(currency_guide)
+        print("-" * 40)
+        print("\nVisa Guide:")
+        print("-" * 40)
+        print(visa_guide)
+        print("-" * 40)         
+        print("\nLocal Transport Guide:")
+        print("-" * 40)
+        print(local_transport_guide)
+        print("-" * 40)    
 
 
 
@@ -234,6 +289,14 @@ class TravelPlanner:
         print("-" * 40)
 
         itinerary = self.ai.ask(prompt)
+        validation_prompt=(
+            self.validation_agent.build_prompt(
+                destination,
+                itinerary
+            )
+        )
+        validated_itinerary = self.ai.ask(validation_prompt)    
+        itinerary = validated_itinerary
         
         return (
             prompt,
@@ -242,7 +305,11 @@ class TravelPlanner:
             packing_list,
             hidden_gems,
             emergency_plan,
-            optimized_itinerary
+            optimized_itinerary,
+            weather_guide,
+            currency_guide,
+            visa_guide,
+            local_transport_guide
         )
     def create_trip(
         self,
@@ -258,7 +325,11 @@ class TravelPlanner:
             packing_list,
             hidden_gems,
             emergency_plan,
-            optimized_itinerary
+            optimized_itinerary,
+            weather_guide,
+            currency_guide,
+            visa_guide,
+            local_transport_guide
         ) = self.generate_itinerary(
             origin,
             destination,
@@ -275,7 +346,11 @@ class TravelPlanner:
             packing_list,
             hidden_gems,
             emergency_plan,
-            optimized_itinerary
+            optimized_itinerary,
+            weather_guide,
+            currency_guide,
+            visa_guide,
+            local_transport_guide
         )
 
         print(f"Trip saved with ID {trip_id}")
@@ -306,7 +381,11 @@ class TravelPlanner:
             packing_list,
             hidden_gems,
             emergency_plan,
-            optimized_itinerary
+            optimized_itinerary,
+            weather_guide,
+            currency_guide,
+            visa_guide,
+            local_transport_guide
         ) = self.generate_itinerary(
             origin,
             destination,
@@ -323,5 +402,9 @@ class TravelPlanner:
             packing_list=packing_list,
             hidden_gems=hidden_gems,
             emergency_plan=emergency_plan,
-            optimized_itinerary=optimized_itinerary
+            optimized_itinerary=optimized_itinerary,
+            weather_guide=weather_guide,
+            currency_guide=currency_guide,
+            visa_guide=visa_guide,
+            local_transport_guide=local_transport_guide
         )
