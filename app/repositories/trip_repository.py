@@ -13,7 +13,11 @@ def save_trip(
     packing_list,
     hidden_gems,
     emergency_plan,
-    optimized_itinerary
+    optimized_itinerary,
+    weather_guide,
+    currency_guide,
+    visa_guide,
+    transport_guide 
 ):
 
     db = SessionLocal()
@@ -28,7 +32,11 @@ def save_trip(
     packing_list=packing_list,
     hidden_gems=hidden_gems,
     emergency_plan=emergency_plan,
-    optimized_itinerary=optimized_itinerary
+    optimized_itinerary=optimized_itinerary,
+    weather_guide=weather_guide,
+    currency_guide=currency_guide,
+    visa_guide=visa_guide,
+    transport_guide=transport_guide 
 )
 
     db.add(trip)
@@ -205,7 +213,11 @@ def update_trip_data(
     packing_list=None,
     hidden_gems=None,
     emergency_plan=None,
-    optimized_itinerary=None
+    optimized_itinerary=None,
+    weather_guide=None,
+    currency_guide=None,
+    visa_guide=None,
+    local_transport_guide=None,    
 ):
     db = SessionLocal()
 
@@ -246,6 +258,18 @@ def update_trip_data(
 
     if optimized_itinerary is not None:
         trip.optimized_itinerary = optimized_itinerary
+
+    if weather_guide is not None:
+        trip.weather_guide = weather_guide
+
+    if currency_guide is not None:
+        trip.currency_guide = currency_guide
+
+    if visa_guide is not None:
+        trip.visa_guide = visa_guide
+
+    if transport_guide is not None:
+        trip.transport_guide = transport_guide
 
     db.commit()
     db.refresh(trip)
