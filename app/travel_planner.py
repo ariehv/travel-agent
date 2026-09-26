@@ -103,7 +103,7 @@ class TravelPlanner:
             currency_prompt
         )
         visa_prompt = self.visa_agent.build_prompt(
-            self.profile.origin,
+            "Israel",
             destination
         )
         visa_guide = self.ai.ask(
